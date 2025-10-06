@@ -73,7 +73,7 @@
 
 .yellowOverlay {
   position: relative;
-  display: inline-block;
+  display:block;
   overflow: hidden;
   border-radius: 12px; /* optional */
 }
@@ -107,14 +107,18 @@
 /* Medium screens */
 @media (width < 992px) {
   .conditionItem img {
-    height: 150px;
+    height: 160px;
   }
 }
 
 /* Small screens */
 @media (width < 768px) {
+
+  .conditionItem{
+    height: 280px;
+  }
   .conditionItem img {
-    height: 140px;
+    height: 165px;
   }
 
   .conditionItem {
@@ -136,8 +140,11 @@
 
 /* Extra small screens */
 @media (width < 576px) {
+  .conditionItem{
+    height: 280px;
+  }
   .conditionItem img {
-    height: 150px;
+    height: 180px;
   }
 
   .title {
@@ -151,4 +158,12 @@
   .conditionDescription {
     font-size: 0.9rem;
   }
+}
+
+
+@media (width < 576px) {
+   .conditionItem img {
+    height: 170px;
+  }
+
 }
