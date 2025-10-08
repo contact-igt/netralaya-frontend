@@ -9,6 +9,7 @@ import TestimonalText from "@/component/TestimonalText";
 import { HomeConstantData } from "@/constant/Home";
 import InsightfulVideos from "@/component/InsightfulVideos";
 import styles from "./styles.module.css";
+import QuickAction from "@/common/QuickAction";
 
 const HomePageComponent = ({ handleTogglecontactForm }) => {
   return (
@@ -35,6 +36,7 @@ const HomePageComponent = ({ handleTogglecontactForm }) => {
           </div>
         </div>
       </div>
+        <QuickAction handleTogglecontactForm={handleTogglecontactForm} />
     </div>
   );
 };
