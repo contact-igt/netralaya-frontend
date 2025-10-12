@@ -16,7 +16,8 @@ export default function Document() {
           rel="stylesheet"
         />
 
-        <Script id="gtm-script" strategy="afterInteractive">
+      
+       <Script id="gtm-script" strategy="afterInteractive">
           {`
           (function(w,d,s,l,i){
             w[l]=w[l]||[];
@@ -29,6 +30,16 @@ export default function Document() {
           })(window,document,'script','dataLayer',GTM-KDMTHBF2');
         `}
         </Script>
+
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: ` (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "tp09c8w3k4");`,
+          }}
+        />
       </Head>
       <body>
         <noscript>
