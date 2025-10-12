@@ -58,7 +58,7 @@ const Form = ({ handleTogglecontactForm }) => {
 
         Formik.resetForm();
         handleTogglecontactForm(false);
-        router.replace("/thank-you");
+        router.push("/thank-you");
       } catch (err) {
         console.error("Error:", err);
         handleTogglecontactForm(false);
