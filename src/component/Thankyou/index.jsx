@@ -1,18 +1,7 @@
 import Button from "@/common/Button";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
-
 const Thankyou = () => {
-    const router = useRouter();
-        useEffect(() => {
-        const cameFromForm = sessionStorage.getItem("formSubmitted");
-
-        if (!cameFromForm) {
-            router.push("/");
-        }
-    }, [router]);
     return (
         <section className={`${styles.container} d-flex justify-content-center align-items-center flex-column`}>
             <Image src="/assets/check.png" alt="" width={120} height={120} className={styles.image} />
