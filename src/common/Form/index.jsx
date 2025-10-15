@@ -2,11 +2,8 @@ import { useFormik } from "formik";
 import Button from "../Button";
 import styles from "./styles.module.css";
 import * as Yup from "yup";
-import { useState } from "react";
-import { useRouter } from "next/router";
 
 const Form = ({ handleTogglecontactForm }) => {
-  const router = useRouter();
   const [loading, setisLoading] = useState(false);
   const formik = useFormik({
     initialValues: {
@@ -58,7 +55,9 @@ const Form = ({ handleTogglecontactForm }) => {
 
         Formik.resetForm();
         handleTogglecontactForm(false);
-        router.push("/thank-you");
+        if (window.location !== undefined) {
+          window.location.href = "/thank-you";
+        }
       } catch (err) {
         console.error("Error:", err);
         handleTogglecontactForm(false);
