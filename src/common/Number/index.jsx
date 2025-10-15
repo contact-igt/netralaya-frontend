@@ -8,8 +8,8 @@ const Number = () => {
       <div className="container">
         <div className="row">
           {HomeConstantData?.Number?.map((data, i) => (
-            <div className="col-lg-3 col-6 mt-3 mb-lg-0 d-flex justify-content-center text-center">
-              <div className={styles.countNums} key={i}>
+            <div key={i} className="col-lg-3 col-6 mt-3 mb-lg-0 d-flex justify-content-center text-center">
+              <div className={styles.countNums}>
                 <h6>
                   {data?.id == "4" ? (
                     <CountUp
