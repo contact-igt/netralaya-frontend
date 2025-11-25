@@ -10,8 +10,8 @@ const About = ({ aboutData, handleTogglecontactForm }) => {
             <div className={styles.aboutWrapper}>
               <h4>Most Recognised Laser Eye Surgeon in India</h4>
               <p>
-                Dr. Prateek Tiwari is a trusted Opthalmology surgeon associated
-                with Antardrishti Netralaya. Known for compassionate,
+                Dr. Prateek Tiwari is a trusted Ophthalmology surgeon associated
+                with Antardrashti Netralaya. Known for compassionate,
                 patient-first care and modern surgical techniques, Dr. Tiwari
                 blends advanced technology with clear communication so every
                 patient feels informed, safe, and confident about their vision.

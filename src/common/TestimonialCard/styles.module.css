@@ -54,6 +54,7 @@
 
 .textContainer {
   color: #000;
+  text-align: left;
 }
 
 .textContainer h4 {
@@ -68,7 +69,7 @@
 }
 
 .textContainer p {
-  margin: 5px 0;
+  margin: 5px 0 0;
   font-size: 0.85em;
 }
 
@@ -136,6 +137,16 @@
   text-overflow: ellipsis;
 }
 
+.seeMoreBtn {
+  margin-top: 3px;
+  color: #42474d;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  font-size: 0.9rem;
+}
 
 @media (width < 1200px) {
 

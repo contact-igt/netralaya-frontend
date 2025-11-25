@@ -26,6 +26,12 @@ const TestimonialCard = ({
             </div>
             <div className={styles.textContainer}>
                 <p>{testimonial}</p>
+                           <button
+                    className={styles.seeMoreBtn}
+                    onClick={openModal}
+                >
+                    See More
+                </button>
             </div>
         </div>
     );
