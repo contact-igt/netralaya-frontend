@@ -19,9 +19,11 @@ const About = ({ aboutData, handleTogglecontactForm }) => {
               <div className={styles.aboutBtn}>
                 <Button
                 onClick={handleTogglecontactForm}
-                  btnTitle={"Book Your Consultation Today !"}
+                  btnTitle={"Book Your Consultation Today"}
                   bgColor={"#a98927"}
                   textColor={"#ffff"}
+                  btnIcon={"arrow-right"}
+                  iconColor={"#ffff"}
                 />
               </div>
             </div>

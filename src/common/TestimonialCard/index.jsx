@@ -30,7 +30,7 @@ const TestimonialCard = ({
                     className={styles.seeMoreBtn}
                     onClick={openModal}
                 >
-                    See More
+                    See more
                 </button>
             </div>
         </div>

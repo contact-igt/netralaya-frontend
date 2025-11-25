@@ -156,7 +156,7 @@ export const HomeConstantData = {
   },
 
   InsightfulVideos: {
-    title: "Insightful Words from Healthcare Heroes",
+    title: "Insightful Words from Healthcare Heroes :",
     testimonialContent: [
       {
         name: "Chaturvedi",

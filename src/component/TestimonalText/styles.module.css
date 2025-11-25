@@ -48,8 +48,9 @@
 }
 
 .testimonialName {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 15px;
+  font-weight: 600;
 }
 
 .testimonialMore {
