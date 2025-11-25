@@ -36,7 +36,7 @@ const HomePageComponent = ({ handleTogglecontactForm }) => {
           </div>
         </div>
       </div>
-        <QuickAction handleTogglecontactForm={handleTogglecontactForm} />
+      <QuickAction handleTogglecontactForm={handleTogglecontactForm} />
     </div>
   );
 };

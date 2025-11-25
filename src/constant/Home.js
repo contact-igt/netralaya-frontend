@@ -29,14 +29,14 @@ export const HomeConstantData = {
 
   AdvancedCataract: {
     card: {
-      title: "What Is Cataract and Why Timely Treatment Matters",
+      title: "What Is Cataract and Why Timely Treatment Matters?",
       description:
         "A cataract clouds the eye's natural lens, causing blurred vision, glare, and reduced ability to read, drive, and perform everyday activities.",
     },
     aboutExplain: {
       title: "Advanced Cataract Surgery at Nihar Netralaya",
       description:
-        "At Antardrishti Netralaya, cataract surgery isn’t just about removing a cloudy lens — it’s about restoring your vision with precision and confidence. With over 30+ years of expertise and advanced technology, we bring you the safest and most effective cataract treatments in Indore, such as:",
+        "At Antardrashti Netralaya, cataract surgery isn’t just about removing a cloudy lens — it’s about restoring your vision with precision and confidence. With over 30+ years of expertise and advanced technology, we bring you the safest and most effective cataract treatments in Indore, such as:",
     },
 
     aboutQuestion: [
@@ -115,7 +115,7 @@ export const HomeConstantData = {
   },
   areYouACanditate: {
     title: "Are You A Candidate For Cataract Surgery?",
-    description: "Cataract surgery is highly recommended if you",
+    description: "Cataract surgery is highly recommended if you:",
     cataractConditions: [
       {
         title: "Have cloudy or blurred vision",
@@ -152,11 +152,11 @@ export const HomeConstantData = {
     designation: "Ophthalmology - Visionary Eye Surgeon & Innovator",
     image: "",
     description:
-      "Dr. Prateek Tiwari is a trusted Opthalmology surgeon associated with Antardrishti Netralaya. Known for compassionate, patient-first care and modern surgical techniques, Dr. Tiwari blends advanced technology with clear communication so every patient feels informed, safe, and confident about their vision.",
+      "Dr. Prateek Tiwari is a trusted Ophthalmology surgeon associated with Antardrashti Netralaya. Known for compassionate, patient-first care and modern surgical techniques, Dr. Tiwari blends advanced technology with clear communication so every patient feels informed, safe, and confident about their vision.",
   },
 
   InsightfulVideos: {
-    title: "Insightful Words from Healthcare Heroes",
+    title: "Insightful Words from Healthcare Heroes :",
     testimonialContent: [
       {
         name: "Chaturvedi",
@@ -185,10 +185,10 @@ export const HomeConstantData = {
     ],
   },
   TestimonalText: {
-    title: "Antardrishti Netralaya Testimonials",
+    title: "Antardrashti Netralaya Testimonials",
     quoteIcon: "assets/quote.png",
     description:
-      "Consulted with Prateek sir regarding Cataract issue for my father. He diagnosed the issue quickly and recommended surgery. The surgery and post surgery experience was also very smooth. Prateek sir is very humble and friendly by nature. He explained the condition in a detailed manner and was always available whenever we had any doubts. Overall a great experience!",
+      "Consulted with Prateek Sir regarding Cataract issue for my father. He diagnosed the issue quickly and recommended surgery. The surgery and post surgery experience was also very smooth. Prateek Sir is very humble and friendly by nature. He explained the condition in a detailed manner and was always available whenever we had any doubts. Overall a great experience!",
     name: "Riya Sheth",
     content1description: "Cataract Integrated with Advanced Technology",
     button1text: "Enquiry Now",
@@ -208,7 +208,7 @@ export const HomeConstantData = {
       },
       {
         question:
-          "What type of cataract surgeries does Antardrishti Netralaya offer?",
+          "What type of cataract surgeries does Antardrashti Netralaya offer?",
         answer:
           "We offer the latest techniques, including: Femto Laser-Assisted Cataract Surgery (FLACS), Microincision CataractSurgery (MICS), Phacoemulsification,Premium lens implantation (Multifocal, Toric, Trifocal IOLs)",
       },
@@ -225,7 +225,7 @@ export const HomeConstantData = {
       {
         question: "Is cataract surgery painful?",
         answer:
-          "No. It is usually a painless 10-15 minute day-case procedure performed under local anaesthesia. Patients are discharged on the same day.",
+          "No. It is usually a painless 10-15 minute day-case procedure performed under local Anesthesia. Patients are discharged on the same day.",
       },
       {
         question: "How soon can I return to my usual activities?",
@@ -238,7 +238,7 @@ export const HomeConstantData = {
           "Yes. With modern technology and an experienced surgical team, cataract surgery is among the safest of surgical procedures with a very high success rate. ",
       },
       {
-        question: "What sets Antardrishti Netralaya apart?",
+        question: "What sets Antardrashti Netralaya apart?",
         answer:
           "First to have introduced Femto Laser in Indore, Diagnostics and digital eye mapping conducted in-house, Personalized IOL selection according to your eyes' needs, NABH accreditation for top-level hygiene and care reading, Entire surgery enabled through AI-enabled precision systems",
       },

@@ -72,7 +72,7 @@ const Form = ({ handleTogglecontactForm }) => {
     <div>
       <div className={styles.formTopic}>
         <h4>Book Your Consultation</h4>
-        <p>Fill the form below and we will get back to you asap.</p>
+        <p>Fill the form below and we will get back to you soon.</p>
       </div>
       <form onSubmit={formik.handleSubmit}>
         <div className={styles.inputgrp}>
