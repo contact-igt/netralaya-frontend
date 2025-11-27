@@ -1,29 +1,20 @@
-
-/* .layoutContainer {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 0 15px; 
-} */
-
-.mainrow{
-    display: flex;
+.mainrow {
+  display: flex;
   align-items: stretch;
 }
-/* .contentContainer {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 15px;
-} */
+
 
 .contentContainer {
   max-width: 1350px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
 .rightContent {
   display: flex;
   flex-direction: column;
 }
+
 @media (max-width: 992px) {
   .layoutContainer {
     max-width: 100%;
