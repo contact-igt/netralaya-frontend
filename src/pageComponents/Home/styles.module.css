@@ -13,6 +13,7 @@
 .rightContent {
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 @media (max-width: 992px) {
