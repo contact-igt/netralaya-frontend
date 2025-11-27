@@ -1,39 +1,71 @@
+/* MAIN CONTAINER */
 .stickySection {
   display: flex;
+  position: relative;
+  width: 100%;
 }
 
+
+/* WRAPPER BEFORE STICKY */
 .stickyFormWrapper {
   position: relative;
   top: 20px;
   height: fit-content;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  width: 100%; /* responsive */
+  max-width: 405px;
+
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px,
+              rgba(14, 30, 37, 0.32) 0px 2px 16px;
   padding: 30px;
   border-radius: 10px;
+  transition: width 0.2s ease;
 }
 
+
+/* FIXED STICKY POSITION */
 .sticky {
   position: fixed;
   top: 20px;
-  width: 405px;
+  z-index: 100;
+  width: inherit; /* keep same width */
 }
 
 
-@media (width < 1400px) {
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
 
-  .sticky {
-    width: 345px;
+/* Large screens */
+@media (max-width: 1400px) {
+  .stickyFormWrapper {
+    max-width: 345px;
   }
-
 }
 
-@media (width < 1200px) {
+/* Small laptops */
+@media (max-width: 1200px) {
+  .stickyFormWrapper {
+    max-width: 300px;
+    padding: 20px;
+  }
+}
 
-  .sticky{
-    width: 290px;
+/* Tablets */
+@media (max-width: 992px) {
+  .sticky {
+    position: relative; /* disable sticky */
+    top: 0;
   }
   
-  .stickyFormWrapper{
+  .stickyFormWrapper {
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .stickyFormWrapper {
     padding: 15px;
+    max-width: 100%;
   }
 }
