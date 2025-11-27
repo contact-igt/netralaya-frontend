@@ -12,7 +12,7 @@ const Header = ({ handleTogglecontactForm }) => {
         >
           <a href="https://antardrashtinetralaya.com/" target="blank">
           <div className={styles.headerImg}>
-            <Image src={"/assets/logo2.png"} width={140} height={120} />
+            <Image src={"/assets/logo2.png"} alt="logo" width={140} height={120} />
           </div>
           </a>
           <div className="d-none d-md-block">
@@ -23,7 +23,7 @@ const Header = ({ handleTogglecontactForm }) => {
                 <Button
                   bgColor={"#fff"}
                   btnIcon={"phone"}
-                  textColor={"#42474D"}
+                  textColor={"#2F3032"}
                   btnTitle2={"+91 9990110596"}
                   link={"tel:+919990110596"}
                   iconColor={"#ae8624"}

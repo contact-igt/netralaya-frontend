@@ -4,7 +4,7 @@ import Image from "next/image";
 const Thankyou = () => {
     return (
         <section className={`${styles.container} d-flex justify-content-center align-items-center flex-column`}>
-            <Image src="/assets/check.png" alt="" width={120} height={120} className={styles.image} />
+            <Image src="/assets/check.png" alt="Checkmark icon" width={120} height={120} className={styles.image} />
             <h1 className={`${styles.title} mt-3 fw-bold`}>Thank You for Booking Your Consultation!</h1>
             <p>We’ve received your mobile number and our specialist will contact you soon.</p>
 
@@ -28,7 +28,7 @@ const Thankyou = () => {
                 </ul>
             </div>
             <div className="mt-4">
-                <Button link={"https://antardrashtinetralaya.com/"} btnTitle2="Back to Home" bgColor="#e1ba5c" textColor="#42474d" btnIcon={"arrow-left"} iconColor={"#42474d"} />
+                <Button link={"https://antardrashtinetralaya.com/"} btnTitle2="Back to Home" bgColor="#e1ba5c" textColor="#2F3032" btnIcon={"arrow-left"} iconColor={"#2F3032"} />
             </div>
         </section>
     );
