@@ -103,7 +103,7 @@ const InsightfulVideos = ({ data }) => {
         <section>
             <h4 className={styles.title}>{data?.title}</h4>
             <div className={styles.testimonialContainer}>
-                <Slider key={slidesToShow + (centerMode ? 'c' : '')} {...settings} className={styles.sliderWrapper}>
+                <Slider key={centerMode ? 'c' : ''} {...settings} className={styles.sliderWrapper}>
                     {
                         data?.testimonialContent?.map((item, index) => (
                             <TestimonialCard key={index} imageSrc={item?.imageSrc} openModal={() => openModal(item.videoUrl)} name={item?.name} testimonial={item?.testimonial} />
