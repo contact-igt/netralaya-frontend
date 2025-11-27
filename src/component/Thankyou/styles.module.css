@@ -9,13 +9,14 @@
   width: 560px;
   height: 315px;
 }
-.title{
-    width: 100%;
+
+.title {
+  width: 100%;
 }
 
 .card {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   text-align: start;
@@ -38,9 +39,11 @@
   color: #fff;
   margin-bottom: 0;
 }
+
 .card ul li {
   font-size: 15px;
 }
+
 .card ul li::marker {
   color: #e1ba5c;
 }
@@ -49,9 +52,11 @@
   .card {
     width: 95%;
   }
-  .videoContainer{
+
+  .videoContainer {
     width: 95%;
   }
+
   .videoContainer iframe {
     width: 100%;
   }

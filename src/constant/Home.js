@@ -170,7 +170,7 @@ export const HomeConstantData = {
         name: "Karnal Charanjit Nagarath",
         imageSrc: "/assets/testimonialImage2.png",
         testimonial:
-          "I had trouble seeing colors and was diagnosed with cataracts in both eyes. I chose Center for Sight and Dr. Prateek Tiwari for surgery. Both surgeries were smooth, and the staff followed all protocols carefully. Now my vision is much clearer, and I can distinguish colors easily!",
+          "I had trouble seeing colors and was diagnosed with cataracts in both eyes. I choose Center for Sight and Dr. Prateek Tiwari for surgery. Both surgeries were smooth, and the staff followed all protocols carefully. Now my vision is much clearer, and I can distinguish colors easily!",
         videoUrl:
           "https://www.youtube.com/embed/EaUCdR_nG5c?si=9r_WNXFtIDEVBdpC",
       },

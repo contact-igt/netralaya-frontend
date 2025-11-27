@@ -1,5 +1,5 @@
-.callCta button,
-.callCta button:hover {
+.callCta a,
+.callCta a:hover {
     border: 2px solid #deb24ae6;
 }
 

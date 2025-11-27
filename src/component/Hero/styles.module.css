@@ -1,27 +1,35 @@
+/* -----------------------------------
+   HERO CONTAINER + BACKGROUND
+----------------------------------- */
+.heroContainer {
+    position: relative;
+    min-height: 900px;      /* Default desktop height */
+}
+
 .bgWrapper {
-    background: url("/assets/bgimage.jpg");
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 900px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;           /* REQUIRED for <Image fill> */
+    overflow: hidden;
     border-radius: 20px;
+}
+
+.bgImg {
+    object-fit: cover;
+    object-position: center;
     filter: brightness(0.4);
 }
 
-.layerForm {
-    top: 23%;
-    right: 4%;
-    width: 500px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    position: absolute;
-}
 
+/* -----------------------------------
+   TEXT BLOCK
+----------------------------------- */
 .layerText {
+    position: absolute;
     top: 15%;
     left: 4%;
-    color: #ffff;
+    color: #fff;
     width: 500px;
 }
 
@@ -30,106 +38,113 @@
     font-weight: 600;
 }
 
+.layerText h4:nth-child(2) {
+    color: #e1ba0a !important;
+}
+
 .layerText p {
     font-size: 40px;
     font-weight: 500;
     margin-top: 20px;
 }
 
-.layerText h4:nth-child(2) {
-    color: #e1ba5c !important;
-}
 
-.layerNumber {
-    bottom: 66px;
-    background-color: #fdd87fa8;
-    left: 0px;
+/* -----------------------------------
+   FORM BLOCK
+----------------------------------- */
+.layerForm {
     position: absolute;
+    top: 23%;
+    right: 4%;
+    width: 500px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
 }
 
-@media (width < 1400px) {
+
+/* -----------------------------------
+   NUMBER BLOCK
+----------------------------------- */
+.layerNumber {
+    position: absolute;
+    bottom: 66px;
+    left: 0;
+    width: 100%;
+    background-color: #fdd87fa8;
+    border-radius: 10px;
+}
+
+
+
+/* -----------------------------------
+   RESPONSIVE BREAKPOINTS
+----------------------------------- */
+
+/* 1400px */
+@media (max-width: 1400px) {
+    .heroContainer {
+        min-height: 820px;
+    }
+
     .layerText h4 {
         font-size: 80px;
     }
 
     .layerText p {
-        width: 450px;
         font-size: 35px;
+        width: 450px;
     }
 
     .layerForm {
         width: 450px;
         top: 18%;
+    }
+}
+
+
+/* 1200px */
+@media (max-width: 1200px) {
+    .heroContainer {
+        min-height: 750px;
+    }
+
+    .layerText h4 {
+        font-size: 70px;
+    }
+
+    .layerText p {
+        font-size: 28px;
+        width: 350px;
+    }
+
+    .layerForm {
+        width: 400px;
+        top: 15%;
         right: 5%;
     }
 }
 
-@media (width < 1200px) {
+
+/* 992px — Tablet */
+@media (max-width: 992px) {
+    .heroContainer {
+        min-height: auto;
+    }
+
     .bgWrapper {
-        height: 800px;
-    }
-
-    .layerText {
-        top: 10%;
-    }
-
-    .layerText h4 {
-        font-size: 75px;
-    }
-
-    .layerText p {
-        font-size: 25px;
-        width: 300px;
-    }
-
-    .layerForm,
-    .layerText {
-        width: 400px;
-        top: 14%;
-    }
-
-
-}
-
-@media (width < 992px) {
-    .bgWrapper {
+        position: relative;
         height: 480px;
-        padding-bottom: 80px;
-    }
-
-    .layerForm {
-        position: relative;
-        width: 100%;
-        margin: 50px 0px;
-        top: 0;
-        right: 0;
-        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-            rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    }
-
-    .layerText {
-        position: relative;
-        width: 100%;
-        text-align: start;
-        top: 5px;
-        left: 0;
-        padding: 50px 66px;
-    }
-
-    .layerNumber {
-        position: relative;
-        bottom: 0;
         border-radius: 15px;
     }
 
-    .layerText p {
-        width: 450px;
-    }
-}
-
-@media (width < 768px) {
-    .bgWrapper {
-        height: 430px;
+    .layerText {
+        position: relative;
+        width: 100%;
+        top: -20px;
+        left: 0;
+        padding: 30px 20px;
+        text-align: left;
     }
 
     .layerText h4 {
@@ -138,26 +153,61 @@
 
     .layerText p {
         font-size: 24px;
+        width: 100%;
+    }
+
+    .layerForm {
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+        top: 0;
+        right: 0;
+        padding: 25px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px,
+                    rgba(14, 30, 37, 0.32) 0 2px 16px;
+    }
+
+    .layerNumber {
+        position: relative;
+        bottom: 0;
+        margin-top: 20px;
     }
 }
 
-@media (width < 576px) {
+
+/* 768px — Large Mobile */
+@media (max-width: 768px) {
+    .bgWrapper {
+        height: 430px;
+    }
+
+    .layerText h4 {
+        font-size: 55px;
+    }
+
+    .layerText p {
+        font-size: 22px;
+    }
+}
+
+
+/* 576px — Small Mobile */
+@media (max-width: 576px) {
     .bgWrapper {
         height: 400px;
     }
 
-    .layerText{
-        padding: 50px 27px;
-        top: 20px;
+    .layerText {
+        padding: 20px;
+        top: 0;
     }
 
     .layerText h4 {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .layerText p {
         font-size: 20px;
-        width: 100%;
     }
 
     .layerForm {

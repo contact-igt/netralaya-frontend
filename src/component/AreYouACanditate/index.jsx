@@ -1,4 +1,3 @@
-import { DynamicIcon } from "lucide-react/dynamic";
 import styles from "./styles.module.css";
 import Button from "@/common/Button";
 

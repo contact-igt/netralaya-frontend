@@ -8,29 +8,29 @@ const InsightfulVideos = ({ data }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [slidesToShow, setSlidesToShow] = useState(2);
-    const [centerMode, setCenterMode] = useState(false);
+    const centerMode = data.testimonialContent.length === 1
 
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth > 768) {
-                setSlidesToShow(2);
-                setCenterMode(false);
-            } else if (window.innerWidth <= 768 && window.innerWidth > 576) {
-                setSlidesToShow(1.5);
-                setCenterMode(false);
-            } else {
-                setSlidesToShow(1);
-                setCenterMode(true);
-            }
-        };
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         if (window.innerWidth > 768) {
+    //             setSlidesToShow(2);
+    //             setCenterMode(false);
+    //         } else if (window.innerWidth <= 768 && window.innerWidth > 576) {
+    //             setSlidesToShow(1.5);
+    //             setCenterMode(false);
+    //         } else {
+    //             setSlidesToShow(1);
+    //             setCenterMode(true);
+    //         }
+    //     };
 
-        handleResize();
-        window.addEventListener("resize", handleResize);
+    //     handleResize();
+    //     window.addEventListener("resize", handleResize);
 
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener("resize", handleResize);
+    //     };
+    // }, []);
     const openModal = (videoUrl) => {
         setSelectedVideo(videoUrl);
         setIsModalOpen(true);
@@ -45,18 +45,65 @@ const InsightfulVideos = ({ data }) => {
         speed: 500,
         autoplay: true,
         autoplaySpeed: 4000,
-        slidesToShow: slidesToShow,
+        slidesToShow: 2,
         slidesToScroll: 1,
         arrows: true,
         pauseOnHover: true,
         centerMode: centerMode,
         centerPadding: centerMode ? '0px' : '50px',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                    centerMode: centerMode,
+                    centerPadding: "0px",
+                    infinite: true,
+                },
+            },
+
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                    infinite: true,
+                    centerMode: centerMode,
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                    centerMode: centerMode,
+                    centerPadding: "0px",
+                    infinite: true,
+                },
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                    centerMode: true,
+                    centerPadding: "0px",
+                    infinite: true,
+                },
+            },
+        ],
     };
     return (
         <section>
             <h4 className={styles.title}>{data?.title}</h4>
             <div className={styles.testimonialContainer}>
-                <Slider key={slidesToShow + (centerMode ? 'c' : '')} {...settings} className={styles.sliderWrapper}>
+                <Slider key={centerMode ? 'c' : ''} {...settings} className={styles.sliderWrapper}>
                     {
                         data?.testimonialContent?.map((item, index) => (
                             <TestimonialCard key={index} imageSrc={item?.imageSrc} openModal={() => openModal(item.videoUrl)} name={item?.name} testimonial={item?.testimonial} />
