@@ -20,6 +20,7 @@ const AreYouACanditate = ({ data, handleTogglecontactForm }) => {
                     src={item?.image}
                     className={styles.image}
                     alt={item?.title}
+                    loading="lazy"
                   />
                   </div>
                 </div>

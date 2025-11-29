@@ -29,7 +29,7 @@
     left: 30px;
 }
 
-.bgimgWrapper img {
+.bgimgWrapper .profileImage {
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -60,7 +60,7 @@
         height: 270px;
     }
 
-    .bgimgWrapper img {
+    .bgimgWrapper .profileImage {
         width: 250px;
         height: 250px;
         object-fit: cover;
@@ -98,7 +98,7 @@
         height: 230px;
     }
 
-    .bgimgWrapper img {
+    .bgimgWrapper .profileImage {
         width: 200px;
         height: 200px;
     }
@@ -135,7 +135,7 @@
         left: 212px;
     }
 
-    .bgimgWrapper img {
+    .bgimgWrapper .profileImage {
         width: 300px;
         height: 300px;
     }
@@ -194,7 +194,7 @@
 
     }
 
-    .bgimgWrapper img {
+    .bgimgWrapper .profileImage {
         width: 350px;
         height: 350px;
     }
@@ -214,7 +214,7 @@
         top: 14%;
     }
 
-    .bgimgWrapper img {
+    .bgimgWrapper .profileImage {
         width: 250px;
         height: 250px;
     }

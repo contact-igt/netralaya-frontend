@@ -12,7 +12,7 @@ const Header = ({ handleTogglecontactForm }) => {
         >
           <a href="https://antardrashtinetralaya.com/" target="blank">
           <div className={styles.headerImg}>
-            <Image src={"/assets/logo2.png"} alt="logo" width={140} height={120} />
+            <Image src={"/assets/logo2.webp"} alt="logo" width={140} height={120} />
           </div>
           </a>
           <div className="d-none d-md-block">

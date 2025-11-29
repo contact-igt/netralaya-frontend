@@ -1,5 +1,5 @@
 .testimonialContainer {
-  background: url("/assets/testimonialTextImage1.jpg");
+  background: url("/assets/testimonialTextImage1.webp");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 80px 30px;
@@ -62,7 +62,7 @@
 }
 
 .moreContent1 {
-  background: url("/assets/testimonialTextImage2.jpg");
+  background: url("/assets/testimonialTextImage2.webp");
   background-size: cover;
   background-repeat: no-repeat;
   height: 290px;
@@ -94,7 +94,7 @@
 }
 
 .moreContent2 {
-  background: url("/assets/testimonialTextImage3.JPG");
+  background: url("/assets/testimonialTextImage3.webp");
   background-size: cover;
   background-repeat: no-repeat;
   height: 290px;

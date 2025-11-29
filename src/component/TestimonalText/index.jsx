@@ -8,7 +8,7 @@ const TestimonalText = ({ data, handleTogglecontactForm }) => {
         <div className={styles.overlay}></div>
         <div className={styles.testimonialContent}>
           <h5>{data?.title}</h5>
-          <img className={styles.quoteIcon} src={data?.quoteIcon} alt="" />
+          <img className={styles.quoteIcon} src={data?.quoteIcon} alt="" loading="lazy"  />
           <p>{data?.description}</p>
           <p className={styles.testimonialName}> {` - ${data?.name}`}</p>
         </div>

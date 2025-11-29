@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/common/Button";
 import styles from "./styles.module.css";
 
@@ -18,7 +19,7 @@ const About = ({ aboutData, handleTogglecontactForm }) => {
               </p>
               <div className={styles.aboutBtn}>
                 <Button
-                onClick={handleTogglecontactForm}
+                  onClick={handleTogglecontactForm}
                   btnTitle={"Book Your Consultation Today"}
                   bgColor={"#a98927"}
                   textColor={"#ffff"}
@@ -33,7 +34,14 @@ const About = ({ aboutData, handleTogglecontactForm }) => {
               <div className={styles.bgWrapper}></div>
 
               <div className={`${styles.bgimgWrapper} position-absolute`}>
-                <img src="\assets\profile2.png" className="img-fluid" />
+                <Image
+                  src="/assets/profile2.webp"
+                  alt="Dr. Prateek Tiwari - Ophthalmology Surgeon"
+                  width={400}
+                  height={500}
+                  className={styles.profileImage}
+                />
+                {/* <img src="\assets\profile2.webp" className="img-fluid" /> */}
               </div>
 
               <div className={`${styles.imgDetail} text-center mt-3 `}>

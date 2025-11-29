@@ -1,5 +1,5 @@
 import TestimonialCard from "@/common/TestimonialCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Slider from "react-slick";
 import styles from "./styles.module.css"
 import { Popup } from "@/common/Popup";
@@ -7,30 +7,7 @@ import { Popup } from "@/common/Popup";
 const InsightfulVideos = ({ data }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedVideo, setSelectedVideo] = useState(null);
-    const [slidesToShow, setSlidesToShow] = useState(2);
     const centerMode = data.testimonialContent.length === 1
-
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         if (window.innerWidth > 768) {
-    //             setSlidesToShow(2);
-    //             setCenterMode(false);
-    //         } else if (window.innerWidth <= 768 && window.innerWidth > 576) {
-    //             setSlidesToShow(1.5);
-    //             setCenterMode(false);
-    //         } else {
-    //             setSlidesToShow(1);
-    //             setCenterMode(true);
-    //         }
-    //     };
-
-    //     handleResize();
-    //     window.addEventListener("resize", handleResize);
-
-    //     return () => {
-    //         window.removeEventListener("resize", handleResize);
-    //     };
-    // }, []);
     const openModal = (videoUrl) => {
         setSelectedVideo(videoUrl);
         setIsModalOpen(true);

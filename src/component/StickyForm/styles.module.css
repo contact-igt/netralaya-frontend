@@ -18,7 +18,9 @@
               rgba(14, 30, 37, 0.32) 0px 2px 16px;
   padding: 30px;
   border-radius: 10px;
-  transition: width 0.2s ease;
+  background-color: #fff;
+  z-index: 100;
+  align-self: flex-start;
 }
 
 
@@ -26,38 +28,29 @@
 .sticky {
   position: fixed;
   top: 20px;
-  width: inherit; /* keep same width */
+  width: 405px;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 30px;
+  border-radius: 10px;
 }
 
-
-/* ---------- RESPONSIVE BREAKPOINTS ---------- */
-
-/* Large screens */
-@media (max-width: 1400px) {
-  .stickyFormWrapper {
-    max-width: 345px;
-  }
-}
-
-/* Small laptops */
-@media (max-width: 1200px) {
-  .stickyFormWrapper {
-    max-width: 300px;
-    padding: 20px;
-  }
-}
-
-/* Tablets */
-@media (max-width: 992px) {
+@media (width < 1400px) {
   .sticky {
-    position: relative; /* disable sticky */
-    top: 0;
+    width: 345px;
   }
-  
+}
+
+@media (width < 1200px) {
+  .sticky {
+    width: 290px;
+    padding: 15px;
+  }
+
   .stickyFormWrapper {
-    max-width: 100%;
-    margin-bottom: 30px;
-    padding: 20px;
+    padding: 15px;
   }
 }
 
