@@ -119,28 +119,28 @@ export const HomeConstantData = {
     cataractConditions: [
       {
         title: "Have cloudy or blurred vision",
-        image: "/assets/AreYouACanditateImage1.jpg",
+        image: "/assets/AreYouACanditateImage1.webp",
       },
       {
         title: "Have trouble reading or driving at night",
-        image: "/assets/AreYouACanditateImage2.jpg",
+        image: "/assets/AreYouACanditateImage2.webp",
       },
       {
         title: "Are over 50 and are diagnosed with cataract",
-        image: "/assets/AreYouACanditateImage3.jpg",
+        image: "/assets/AreYouACanditateImage3.webp",
       },
       {
         title: "Wish to reduce dependence on glasses after surgery",
-        image: "/assets/AreYouACanditateImage4.jpg",
+        image: "/assets/AreYouACanditateImage4.webp",
       },
       {
         title:
           "Require a fast, stitch-free, and state-of-the-art laser-assisted procedure",
-        image: "/assets/testimonialTextImage2.jpg",
+        image: "/assets/testimonialTextImage2.webp",
       },
       {
         title: "Colors appearing faded or yellowish",
-        image: "/assets/AreYouACanditateImage6.jpg",
+        image: "/assets/AreYouACanditateImage6.webp",
       },
     ],
     btnText: "Enquiry Now",
@@ -160,7 +160,7 @@ export const HomeConstantData = {
     testimonialContent: [
       {
         name: "Chaturvedi",
-        imageSrc: "/assets/testimonialImage1.png",
+        imageSrc: "/assets/testimonialImage1.webp",
         testimonial:
           "I had vision problems in my left eye for over two months, and glasses didn’t help. I was scared of the injections before surgery, but the doctors guided me through it. The operation was a bit painful, yet my vision improved. Thanks to the medical team, I can see clearly again!",
         videoUrl:
@@ -168,7 +168,7 @@ export const HomeConstantData = {
       },
       {
         name: "Karnal Charanjit Nagarath",
-        imageSrc: "/assets/testimonialImage2.png",
+        imageSrc: "/assets/testimonialImage2.webp",
         testimonial:
           "I had trouble seeing colors and was diagnosed with cataracts in both eyes. I choose Center for Sight and Dr. Prateek Tiwari for surgery. Both surgeries were smooth, and the staff followed all protocols carefully. Now my vision is much clearer, and I can distinguish colors easily!",
         videoUrl:
@@ -176,7 +176,7 @@ export const HomeConstantData = {
       },
       {
         name: "Kamlesh Agrawal",
-        imageSrc: "/assets/testimonialImage3.png",
+        imageSrc: "/assets/testimonialImage3.webp",
         testimonial:
           "I struggled with vision problems for about a year before consulting Dr. Prateek. The cataract surgery was painless and successful. Seven days later, my distance vision improved significantly, though I still need glasses for near tasks. The staff’s care and professionalism made the experience excellent!",
         videoUrl:
@@ -186,7 +186,7 @@ export const HomeConstantData = {
   },
   TestimonalText: {
     title: "Antardrashti Netralaya Testimonials",
-    quoteIcon: "assets/quote.png",
+    quoteIcon: "assets/quote.webp",
     description:
       "Consulted with Prateek Sir regarding Cataract issue for my father. He diagnosed the issue quickly and recommended surgery. The surgery and post surgery experience was also very smooth. Prateek Sir is very humble and friendly by nature. He explained the condition in a detailed manner and was always available whenever we had any doubts. Overall a great experience!",
     name: "Riya Sheth",

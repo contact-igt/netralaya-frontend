@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import styles from './styles.module.css';
-import { ChevronDown, ChevronUp } from 'lucide-react';
 import { DynamicIcon } from 'lucide-react/dynamic';
 
 const Faq = ({data}) => {

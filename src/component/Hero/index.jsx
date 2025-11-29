@@ -8,19 +8,17 @@ const Hero = ({ handleTogglecontactForm }) => {
     <section>
       <div className="container">
         <div className={`position-relative ${styles.heroContainer}`}>
-          {/* Optimized Background Image */}
           <div className={styles.bgWrapper}>
             <Image
-              src="/assets/bgimage.jpg"
-              alt="Cataract background"
+              src="/assets/bgimage.webp"
+              alt="Cataract surgery hero background"
               fill
               priority
-              className={styles.bgImg}
-              sizes="100vw"
+              quality={85}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
+              style={{ objectFit: 'cover', objectPosition: '40% 50%' }}
             />
           </div>
-
-          {/* Text Layer */}
           <div className={`${styles.layerText} position-absolute`}>
             <h4>Painless</h4>
             <h4>Precise</h4>

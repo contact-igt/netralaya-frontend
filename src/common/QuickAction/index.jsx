@@ -17,7 +17,7 @@ const QuickAction = ({ handleTogglecontactForm }) => {
         rel="noopener noreferrer"
         className={`${styles.actionBtn}`}
       >
-        <Image src="/assets/whatsappfilled.png" alt="WhatsApp" width={25} height={25} />
+        <Image src="/assets/whatsappfilled.webp" alt="WhatsApp" width={25} height={25} />
         <p>WA</p>
       </a>
 

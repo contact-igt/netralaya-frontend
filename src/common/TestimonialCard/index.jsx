@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { DynamicIcon } from "lucide-react/dynamic";
 import styles from "./styles.module.css";
 
@@ -10,9 +9,9 @@ const TestimonialCard = ({
 }) => {
     return (
         <div className={styles.testimonialCard}>
-            <img src="/assets/logo2.png" alt="" className={styles.logo} />
+            <img src="/assets/logo2.webp" alt="" className={styles.logo} loading="lazy"  />
             <div className={styles.imageContainer}>
-                <img src={imageSrc} alt={name} className={styles.clientImage} />
+                <img src={imageSrc} alt={name} className={styles.clientImage} loading="lazy"  />
                 <button
                     onClick={openModal}
                     className={styles.playButton}
