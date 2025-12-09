@@ -18,6 +18,7 @@ const Button = ({
     backgroundColor: bgColor,
     color: textColor,
     cursor: "pointer",
+    border:"none"
   };
   return (
     <>

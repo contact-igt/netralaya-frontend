@@ -3,10 +3,11 @@ import Header from "@/common/Header";
 import { Popup } from "@/common/Popup";
 import useUTMSource from "@/hooks/useUTMSource";
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "@/styles/globals.css";
 import { useState } from "react";
+import Preloader from "@/common/Preloader";
 
 export default function App({ Component, pageProps }) {
   useUTMSource();
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <Preloader />
       <Header handleTogglecontactForm={handleTogglecontactForm} />
 
       <Component
