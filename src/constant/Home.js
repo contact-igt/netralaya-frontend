@@ -34,7 +34,7 @@ export const HomeConstantData = {
         "A cataract clouds the eye's natural lens, causing blurred vision, glare, and reduced ability to read, drive, and perform everyday activities.",
     },
     aboutExplain: {
-      title: "Advanced Cataract Surgery at Nihar Netralaya",
+      title: "Advanced Cataract Surgery at Antardrashti Netralaya",
       description:
         "At Antardrashti Netralaya, cataract surgery isn’t just about removing a cloudy lens — it’s about restoring your vision with precision and confidence. With over 30+ years of expertise and advanced technology, we bring you the safest and most effective cataract treatments in Indore, such as:",
     },
