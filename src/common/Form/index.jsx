@@ -4,6 +4,79 @@ import styles from "./styles.module.css";
 import * as Yup from "yup";
 import { useState } from "react";
 
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const CLIENT_KEY = process.env.NEXT_PUBLIC_CLIENT_KEY;
+const REGISTER_API_URL = `${BACKEND_URL}/api/v1/antardrashti-netralaya/register`;
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycby0V7V8j32RnoU3ymvynxDNaH1bwdZEx14WqBN2R26EcNrKEyB3qXAm8qwDAnWWJQxc/exec";
+
+const getIpAddress = async () => {
+  try {
+    const ipResponse = await fetch("https://api.ipify.org?format=json");
+
+    if (!ipResponse.ok) {
+      throw new Error("IP lookup failed");
+    }
+
+    const ipData = await ipResponse.json();
+    return ipData?.ip || "";
+  } catch (error) {
+    console.error("IP fetch failed:", error);
+    return "";
+  }
+};
+
+const submitToRegisterApi = async (payload) => {
+  if (!BACKEND_URL || !CLIENT_KEY) {
+    throw new Error("Missing backend environment configuration");
+  }
+
+  const response = await fetch(REGISTER_API_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Client-Key": CLIENT_KEY,
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (!response.ok) {
+    throw new Error(`API submission failed with status ${response.status}`);
+  }
+
+  return response;
+};
+
+const submitToGoogleScript = async ({
+  name,
+  mobile_number,
+  ip_address,
+  utm_source,
+}) => {
+  const params = new URLSearchParams();
+
+  params.append("Name", name);
+  params.append("MobileNumber", mobile_number);
+  params.append("IP_Address", ip_address);
+  params.append("utm_source", utm_source);
+
+  const response = await fetch(GOOGLE_SCRIPT_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: params.toString(),
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      `Google Script submission failed with status ${response.status}`
+    );
+  }
+
+  return response;
+};
+
 const Form = ({ handleTogglecontactForm }) => {
   const [loading, setisLoading] = useState(false);
   const formik = useFormik({
@@ -23,36 +96,24 @@ const Form = ({ handleTogglecontactForm }) => {
       try {
         setisLoading(true);
 
-        const ipResponse = await fetch("https://api.ipify.org?format=json");
-        const ipData = await ipResponse.json();
-
-        const Formdata = {
-          Name: value.name,
-          MobileNumber: value.mobile,
-          IP_Address: ipData.ip,
-          utm_source: localStorage.getItem("utm_source"),
+        const ipAddress = await getIpAddress();
+        const payload = {
+          name: value.name,
+          mobile_number: value.mobile,
+          service: "Cataract",
+          ip_address: ipAddress,
+          utm_source: localStorage.getItem("utm_source") || "direct",
         };
 
-        const params = new URLSearchParams();
-        Object.keys(Formdata).forEach((key) => {
-          params.append(key, Formdata[key]);
-        });
-
-        const res = await fetch(
-          "https://script.google.com/macros/s/AKfycby0V7V8j32RnoU3ymvynxDNaH1bwdZEx14WqBN2R26EcNrKEyB3qXAm8qwDAnWWJQxc/exec",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: params.toString(),
-          }
-        );
-
-        if (!res.ok) throw new Error("Submission failed");
-
-
-        const data = await res.json();
+        try {
+          await submitToRegisterApi(payload);
+        } catch (apiError) {
+          console.error(
+            "Primary API submission failed. Falling back to Google Script:",
+            apiError
+          );
+          await submitToGoogleScript(payload);
+        }
 
         Formik.resetForm();
         handleTogglecontactForm(false);
