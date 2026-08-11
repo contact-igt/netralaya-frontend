@@ -64,6 +64,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     })(window, document, "clarity", "script", "tp09c8w3k4");`,
           }}
         />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11372966497"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-11372966497');
+            `,
+          }}
+        />
       </body>
     </Html>
   );
