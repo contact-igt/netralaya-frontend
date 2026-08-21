@@ -11,9 +11,9 @@ const Header = ({ handleTogglecontactForm }) => {
           className={`${styles.headerwrapper} d-flex justify-content-between align-items-center py-2`}
         >
           <a href="https://antardrashtinetralaya.com/" target="blank">
-          <div className={styles.headerImg}>
-            <Image src={"/assets/logo2.webp"} alt="logo" width={140} height={120} />
-          </div>
+            <div className={styles.headerImg}>
+              <Image src={"/assets/logo2.webp"} alt="logo" width={140} height={120} />
+            </div>
           </a>
           <div className="d-none d-md-block">
             <div
@@ -24,8 +24,8 @@ const Header = ({ handleTogglecontactForm }) => {
                   bgColor={"#fff"}
                   btnIcon={"phone"}
                   textColor={"#2F3032"}
-                  btnTitle2={"+91 9990110596"}
-                  link={"tel:+919990110596"}
+                  btnTitle2={"+91 7987360323"}
+                  link={"tel:+917987360323"}
                   iconColor={"#ae8624"}
                 />
               </div>
@@ -44,7 +44,7 @@ const Header = ({ handleTogglecontactForm }) => {
           </div>
           <div className="d-block d-md-none">
             <div className="d-flex  gap-3 ">
-              <a href="tel:+919990110596">
+              <a href="tel:+917987360323">
                 <div className={styles.ctabtn}>
                   <DynamicIcon name="phone" size={22} color="#fff" />
                 </div>
